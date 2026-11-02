@@ -54,7 +54,7 @@ export default function Contact() {
           {!CONTACT_EMAIL && (
             <p className="mt-6 text-xs text-[var(--text-dim)] max-w-md">
               Note: the contact form is not yet connected to a mail backend. Set
-              <code className="mx-1 px-1.5 py-0.5 rounded bg-[var(--surface)]">NEXT_PUBLIC_CONTACT_EMAIL</code>
+              <code className="mx-1 px-1.5 py-0.5 rounded bg-[var(--surface)] break-all">NEXT_PUBLIC_CONTACT_EMAIL</code>
               to enable direct email submission, or reach out via GitHub.
             </p>
           )}
