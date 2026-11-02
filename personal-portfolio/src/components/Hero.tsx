@@ -1,89 +1,97 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden noise">
       <div className="absolute inset-0 grid-bg" aria-hidden="true" />
-      <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-[var(--accent)]/20 blur-[120px]" aria-hidden="true" />
-      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-[var(--accent-2)]/15 blur-[120px]" aria-hidden="true" />
+      <div className="absolute top-1/3 -left-32 w-[480px] h-[480px] rounded-full bg-[var(--accent)]/10 blur-[140px]" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[var(--accent-2)]/10 blur-[140px]" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-20 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface)]/60 text-xs text-[var(--text-muted)]"
-        >
-          <Sparkles size={13} className="text-[var(--accent-2)]" />
-          Intelligent systems for e-commerce
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[0.95]"
-        >
-          Aymen Jr.
-          <br />
-          <span className="bg-gradient-to-r from-[var(--accent)] to-[var(--accent-2)] bg-clip-text text-transparent">
-            AI Engineer.
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 max-w-2xl text-lg md:text-xl text-[var(--text-muted)] leading-relaxed"
-        >
-          I build AI-powered systems for e-commerce — customer support, order intelligence,
-          and sales assistance. Real software, built through hands-on learning and engineering.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 flex flex-col sm:flex-row gap-4"
-        >
-          <a
-            href="#support"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[var(--accent)] text-white font-medium hover:opacity-90 transition"
+      <div className="relative mx-auto max-w-7xl px-6 pt-24 pb-16 w-full grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--text-dim)]"
           >
-            Explore Our Work <ArrowRight size={16} />
-          </a>
-          <a
-            href="#acs"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[var(--border-strong)] text-[var(--text)] font-medium hover:bg-[var(--surface)] transition"
-          >
-            Discover ACS
-          </a>
-        </motion.div>
+            <span className="w-8 h-px bg-[var(--accent)]" />
+            AI Engineer
+          </motion.div>
 
-        {/* Visual preview */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="display mt-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[0.9]"
+          >
+            Aymen Jr.
+            <br />
+            <span className="text-[var(--text-muted)]">Building</span>
+            <br />
+            <span className="text-[var(--accent)]">intelligent</span>
+            <br />
+            systems.
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-8 max-w-md text-lg text-[var(--text-muted)] leading-relaxed"
+          >
+            AI systems for e-commerce — support, order intelligence, and sales assistance.
+            Real software, built through hands-on learning and engineering.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-10 flex flex-col sm:flex-row gap-3"
+          >
+            <a href="#work" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[var(--accent)] text-[var(--bg)] font-medium hover:opacity-90 transition">
+              Explore work
+            </a>
+            <a href="https://github.com/aymenfoot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[var(--border-strong)] text-[var(--text)] font-medium hover:bg-[var(--surface)] transition">
+              GitHub
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Visual */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 relative"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="relative hidden lg:block"
         >
-          <div className="surface glow rounded-2xl p-6 md:p-10 max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-3 h-3 rounded-full bg-red-400/80" />
-              <span className="w-3 h-3 rounded-full bg-yellow-400/80" />
-              <span className="w-3 h-3 rounded-full bg-green-400/80" />
-              <span className="ml-4 text-xs text-[var(--text-dim)] font-mono">nexa — agent console</span>
-            </div>
-            <div className="space-y-3 font-mono text-sm overflow-x-auto">
-              <div className="text-[var(--text-dim)]">$ nexa agent --task &quot;Find order ORD-1002 and check delivery&quot;</div>
-              <div className="text-[var(--accent-2)]">→ triage: intent=order_status, order_id=ORD-1002</div>
-              <div className="text-[var(--accent-2)]">→ tool: lookup_order(&quot;ORD-1002&quot;) ✓</div>
-              <div className="text-[var(--text-muted)]">→ response: &quot;Your order is delivered. Tracking: FDX-78901234&quot;</div>
-              <div className="text-green-400">✓ completed in 1.2s</div>
+          <div className="relative aspect-square max-w-[520px] mx-auto">
+            {/* Concentric rings */}
+            <div className="absolute inset-0 rounded-full border border-[var(--border)]" />
+            <div className="absolute inset-8 rounded-full border border-[var(--border-strong)]" />
+            <div className="absolute inset-16 rounded-full border border-[var(--accent)]/30" />
+            <div className="absolute inset-24 rounded-full bg-[var(--accent)]/5 blur-xl" />
+            {/* Nodes */}
+            {[0, 60, 120, 180, 240, 300].map((deg, i) => (
+              <div
+                key={deg}
+                className="absolute w-3 h-3 rounded-full bg-[var(--accent)]"
+                style={{
+                  top: `calc(50% + ${Math.sin((deg * Math.PI) / 180) * 42}%)`,
+                  left: `calc(50% + ${Math.cos((deg * Math.PI) / 180) * 42}%)`,
+                  transform: "translate(-50%, -50%)",
+                  opacity: 0.6 + (i % 3) * 0.13,
+                }}
+              />
+            ))}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="display text-6xl font-semibold text-[var(--accent)]">AI</div>
+                <div className="text-xs font-mono text-[var(--text-dim)] mt-2 tracking-widest">SYSTEMS</div>
+              </div>
             </div>
           </div>
         </motion.div>

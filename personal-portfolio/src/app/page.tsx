@@ -5,9 +5,9 @@ import LearningJourney from "@/components/LearningJourney";
 import Section from "@/components/Section";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import Footer from "@/components/Footer";
-import SupportDemo from "@/components/demos/SupportDemo";
-import OrderDemo from "@/components/demos/OrderDemo";
-import SalesDemo from "@/components/demos/SalesDemo";
+import SupportMockup from "@/components/mockups/SupportMockup";
+import OrderMockup from "@/components/mockups/OrderMockup";
+import SalesMockup from "@/components/mockups/SalesMockup";
 
 export default function Home() {
   return (
@@ -17,12 +17,11 @@ export default function Home() {
       <Bio />
       <LearningJourney />
 
-      <Section id="projects" className="max-w-7xl mx-auto px-6">
-        <p className="text-xs font-mono uppercase tracking-widest text-[var(--text-dim)]">Selected projects</p>
-        <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight">What I&apos;ve built.</h2>
-        <p className="mt-4 max-w-2xl text-[var(--text-muted)]">
-          Here are some of the systems I&apos;ve built through hands-on learning, experimentation, and engineering.
-        </p>
+      <Section id="work">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-xs font-mono uppercase tracking-widest text-[var(--text-dim)]">Selected work</p>
+          <h2 className="display mt-4 text-3xl md:text-5xl font-semibold tracking-tight">What I&apos;ve built.</h2>
+        </div>
       </Section>
 
       <ProjectShowcase
@@ -38,9 +37,9 @@ export default function Home() {
           "Human escalation for sensitive cases",
           "Operations dashboard with real ROI metrics",
         ]}
-        stack={["Python", "FastAPI", "LangChain", "scikit-learn", "SQLite"]}
+        stack={["Python", "FastAPI", "LangChain", "scikit-learn"]}
         github="https://github.com/aymenfoot/nexa-support"
-        demo={<SupportDemo />}
+        mockup={<SupportMockup />}
       />
 
       <ProjectShowcase
@@ -56,9 +55,9 @@ export default function Home() {
           "Agentic reasoning with retry logic",
           "FastAPI gateway with Swagger docs",
         ]}
-        stack={["Python", "LangGraph", "FastAPI", "Streamlit", "SQLite"]}
+        stack={["Python", "LangGraph", "FastAPI", "Streamlit"]}
         github="https://github.com/aymenfoot/nexa-order-intelligence"
-        demo={<OrderDemo />}
+        mockup={<OrderMockup />}
         reverse
       />
 
@@ -75,14 +74,14 @@ export default function Home() {
           "Mobile-responsive storefront experience",
           "Optional N8N AI workflow integration",
         ]}
-        stack={["TypeScript", "Remix", "Prisma", "Shopify", "N8N"]}
+        stack={["TypeScript", "Remix", "Prisma", "Shopify"]}
         github="https://github.com/aymenfoot/nexa-sales"
-        demo={<SalesDemo />}
+        mockup={<SalesMockup />}
       />
 
       <Section id="closing">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Let&apos;s build something.</h2>
+          <h2 className="display text-4xl md:text-6xl font-semibold tracking-tight">Let&apos;s build something.</h2>
           <p className="mt-4 text-[var(--text-muted)] max-w-xl mx-auto">
             Explore the repositories above, or reach out via GitHub.
           </p>
@@ -90,7 +89,7 @@ export default function Home() {
             href="https://github.com/aymenfoot"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[var(--accent)] text-white font-medium hover:opacity-90 transition"
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[var(--accent)] text-[var(--bg)] font-medium hover:opacity-90 transition"
           >
             View GitHub Profile
           </a>

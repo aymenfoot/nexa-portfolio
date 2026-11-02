@@ -15,15 +15,12 @@ export default function Capabilities() {
     <Section id="capabilities" className="bg-[var(--bg-elev)]">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-xs font-mono uppercase tracking-widest text-[var(--text-dim)]">Why NEXA</p>
-        <h2 className="mt-4 text-3xl md:text-5xl font-semibold tracking-tight">Capabilities</h2>
-        <p className="mt-4 max-w-2xl text-[var(--text-muted)]">
-          NEXA builds intelligent commerce systems end to end — from agent design to deployable applications.
-        </p>
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <h2 className="display mt-4 text-3xl md:text-5xl font-semibold tracking-tight">Capabilities</h2>
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)]">
           {caps.map((c) => (
-            <div key={c.title} className="surface rounded-xl p-6">
-              <c.icon size={22} className="text-[var(--accent-2)]" />
-              <h3 className="mt-4 font-semibold">{c.title}</h3>
+            <div key={c.title} className="bg-[var(--bg-elev)] p-8">
+              <c.icon size={20} className="text-[var(--accent)]" />
+              <h3 className="display mt-4 font-semibold">{c.title}</h3>
               <p className="mt-2 text-sm text-[var(--text-muted)]">{c.desc}</p>
             </div>
           ))}
