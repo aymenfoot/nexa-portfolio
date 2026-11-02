@@ -78,7 +78,7 @@ export default function Hero() {
               <span className="w-3 h-3 rounded-full bg-green-400/80" />
               <span className="ml-4 text-xs text-[var(--text-dim)] font-mono">nexa — agent console</span>
             </div>
-            <div className="space-y-3 font-mono text-sm">
+            <div className="space-y-3 font-mono text-sm overflow-x-auto">
               <div className="text-[var(--text-dim)]">$ nexa agent --task &quot;Find order ORD-1002 and check delivery&quot;</div>
               <div className="text-[var(--accent-2)]">→ triage: intent=order_status, order_id=ORD-1002</div>
               <div className="text-[var(--accent-2)]">→ tool: lookup_order(&quot;ORD-1002&quot;) ✓</div>

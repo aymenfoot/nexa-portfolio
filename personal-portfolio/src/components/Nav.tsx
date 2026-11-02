@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -66,7 +65,7 @@ export default function Nav() {
           <button
             className="md:hidden p-2"
             onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+            aria-label="Toggle menu" aria-expanded={open}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -89,7 +88,6 @@ export default function Nav() {
           </div>
         )}
       </header>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
     </>
   );
 }
