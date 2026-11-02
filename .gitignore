@@ -42,3 +42,9 @@ next-env.d.ts
 
 # keep example env
 !.env.example
+
+# nested deps
+**/node_modules
+**/.next
+**/.env*
+!.env.example
