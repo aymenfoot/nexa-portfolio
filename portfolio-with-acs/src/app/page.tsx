@@ -90,7 +90,7 @@ export default function Home() {
             <span className="w-8 h-px bg-[var(--border-strong)]" />
             <span className="uppercase tracking-widest">Flagship System</span>
           </div>
-          <h2 className="display mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[0.95]">
+          <h2 className="display mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[0.9]">
             ACS — Agentic Commerce System
           </h2>
           <p className="mt-4 text-xl text-[var(--accent)] font-medium">Intelligent commerce, engineered for your store.</p>
@@ -118,7 +118,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-12 grid lg:grid-cols-2 gap-8 items-start">
+          <div className="mt-12 grid lg:grid-cols-2 gap-10 items-start">
             <div>
               <h3 className="display text-2xl font-semibold">How ACS works</h3>
               <div className="mt-4 flex flex-wrap items-center gap-2 text-sm font-mono text-[var(--text-muted)]">

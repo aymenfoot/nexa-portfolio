@@ -27,22 +27,22 @@ export default function ProjectShowcase({
   return (
     <Section id={name.toLowerCase().replace(/\s+/g, "-").replace("nexa-", "")}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
-          <div>
-            <div className="flex items-center gap-3 text-xs font-mono text-[var(--text-dim)]">
-              <span>{number}</span>
-              <span className="w-8 h-px bg-[var(--border-strong)]" />
-              <span className="uppercase tracking-widest">{category}</span>
-            </div>
-            <h2 className="display mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-[0.95]">
+        <div className="flex items-center gap-4 mb-8">
+          <span className="font-mono text-xs text-[var(--text-dim)]">{number}</span>
+          <span className="w-12 h-px bg-[var(--border-strong)]" />
+          <span className="text-xs font-mono uppercase tracking-widest text-[var(--text-muted)]">{category}</span>
+        </div>
+        <div className={`grid lg:grid-cols-12 gap-10 lg:gap-16 items-center ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
+          <div className="lg:col-span-5">
+            <h2 className="display text-4xl md:text-6xl font-semibold tracking-tight leading-[0.9]">
               {name}
             </h2>
             <p className="mt-4 text-xl text-[var(--accent)] font-medium">{headline}</p>
-            <p className="mt-6 text-[var(--text-muted)] leading-relaxed max-w-lg">{description}</p>
+            <p className="mt-6 text-[var(--text-muted)] leading-relaxed">{description}</p>
             <ul className="mt-6 space-y-2">
               {points.map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm text-[var(--text-muted)]">
-                  <span className="mt-2 w-1 h-1 rounded-full bg-[var(--accent)] shrink-0" />
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0" />
                   {p}
                 </li>
               ))}
@@ -63,8 +63,8 @@ export default function ProjectShowcase({
               Explore on GitHub <ArrowUpRight size={14} />
             </a>
           </div>
-          <div className="relative">
-            <div className="absolute -inset-4 bg-[var(--accent)]/5 blur-3xl rounded-3xl" aria-hidden="true" />
+          <div className="lg:col-span-7 relative">
+            <div className="absolute -inset-6 bg-[var(--accent)]/5 blur-3xl rounded-3xl" aria-hidden="true" />
             {mockup}
           </div>
         </div>

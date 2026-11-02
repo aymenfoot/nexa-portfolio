@@ -20,7 +20,7 @@ export default function Capabilities() {
           {caps.map((c) => (
             <div key={c.title} className="bg-[var(--bg-elev)] p-8">
               <c.icon size={20} className="text-[var(--accent)]" />
-              <h3 className="display mt-4 font-semibold">{c.title}</h3>
+              <h3 className="display mt-4 font-semibold text-[var(--text)]">{c.title}</h3>
               <p className="mt-2 text-sm text-[var(--text-muted)]">{c.desc}</p>
             </div>
           ))}

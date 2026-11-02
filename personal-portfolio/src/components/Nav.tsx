@@ -30,13 +30,13 @@ export default function Nav() {
       <div className="scroll-progress" style={{ width: `${progress}%` }} aria-hidden="true" />
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-[var(--bg)]/80 backdrop-blur-md border-b border-[var(--border)]" : ""
+          scrolled ? "bg-[var(--forest)]/90 backdrop-blur-md border-b border-[var(--border)]" : ""
         }`}
       >
         <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)]" />
-            <span className="display font-semibold tracking-tight text-lg">NEXA</span>
+            <span className="display font-semibold tracking-tight text-lg text-[var(--ivory)]">NEXA</span>
           </a>
           <ul className="hidden md:flex items-center gap-10 text-sm text-[var(--text-muted)]">
             {links.map((l) => (
@@ -51,11 +51,11 @@ export default function Nav() {
             href="https://github.com/aymenfoot"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-5 py-2 rounded-full bg-[var(--accent)] text-[var(--bg)] hover:opacity-90 transition"
+            className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-5 py-2 rounded-full bg-[var(--accent)] text-[var(--forest)] hover:opacity-90 transition"
           >
             GitHub
           </a>
-          <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
+          <button className="md:hidden p-2 text-[var(--text)]" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
             {open ? "✕" : "☰"}
           </button>
         </nav>
